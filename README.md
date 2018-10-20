@@ -142,7 +142,7 @@ my-app/
   src/
     App.css
     App.js
-    App.test.js
+    AuthorQuiz.test.js
     index.css
     index.js
     logo.svg
@@ -803,7 +803,7 @@ yarn add bootstrap@4 reactstrap
 Import Bootstrap CSS and optionally Bootstrap theme CSS in the beginning of your `src/index.js` file:
 
 ```js
-import 'bootstrap/dist/css/bootstrap.css';
+import bootstrap.min.css;
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 ```
@@ -1326,7 +1326,7 @@ Jest will look for test files with any of the following popular naming conventio
 
 The `.test.js` / `.spec.js` files (or the `__tests__` folders) can be located at any depth under the `src` top level folder.
 
-We recommend to put the test files (or `__tests__` folders) next to the code they are testing so that relative imports appear shorter. For example, if `App.test.js` and `App.js` are in the same folder, the test just needs to `import App from './App'` instead of a long relative path. Colocation also helps find tests more quickly in larger projects.
+We recommend to put the test files (or `__tests__` folders) next to the code they are testing so that relative imports appear shorter. For example, if `AuthorQuiz.test.js` and `App.js` are in the same folder, the test just needs to `import App from './App'` instead of a long relative path. Colocation also helps find tests more quickly in larger projects.
 
 ### Command Line Interface
 
@@ -1379,7 +1379,7 @@ it('renders without crashing', () => {
 });
 ```
 
-This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot of value with very little effort so they are great as a starting point, and this is the test you will find in `src/App.test.js`.
+This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot of value with very little effort so they are great as a starting point, and this is the test you will find in `src/AuthorQuiz.test.js`.
 
 When you encounter bugs caused by changing components, you will gain a deeper insight into which parts of them are worth testing in your application. This might be a good time to introduce more specific tests asserting specific expected output or behavior.
 
@@ -1431,7 +1431,7 @@ Here is an example from Enzyme documentation that asserts specific output, rewri
 ```js
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from AuthorQuiza;
 
 it('renders welcome message', () => {
   const wrapper = shallow(<App />);
